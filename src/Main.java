@@ -11,48 +11,45 @@ public class Main {
 
 
 
-        int ClientOS = 1;
-        int clientDeviceYear = 2015;
-        if (ClientOS == 0 && clientDeviceYear < 2015){
+        int clientDeviceYear = 2013;
+        if (clientOS == 0 && clientDeviceYear < 2015){
             System.out.println("Установите облегченную версию приложения для IOS по ссылке");
-        } else if (ClientOS == 0 && clientDeviceYear >= 2015){
+        } else if (clientOS == 0 && clientDeviceYear >= 2015){
             System.out.println("Установите версию приложения для IOS по ссылке");
-        } else if (ClientOS == 1 && clientDeviceYear < 2015){
+        } else if (clientOS == 1 && clientDeviceYear < 2015){
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        } else if (ClientOS == 1 && clientDeviceYear >= 2015){
+        } else if (clientOS == 1 && clientDeviceYear >= 2015){
             System.out.println("Установите версию приложения для Android по ссылке");
         }
 
 
 
         int year = 2008;
-        if (year >= 1584){
-            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
-                System.out.println("Год является високосным");
-            } else {
-                System.out.println("Год не является високосным");
-            }
-        } else {
+        if (year >= 1584 && (year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
+            System.out.println(year + " год является високосным");
+        } else if ((year >= 1584 && year % 400 != 0) || (year % 4 != 0 && year % 100 == 0)){
+            System.out.println(year + " год не является високосным");
+        } else if (year < 1584){
             System.out.println("Год не может быть меньше 1584");
         }
 
 
 
-        int deliveriDistance = 95;
-        if (deliveriDistance <= 20){
+        int deliveryDistance = 95;
+        if (deliveryDistance <= 20){
             System.out.println("Потребуется дней: 1");
-        } else if (deliveriDistance > 20 && deliveriDistance <= 60){
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60){
             System.out.println("Потребуется дней: 2");
-        } else if (deliveriDistance > 60 && deliveriDistance <= 100){
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100){
             System.out.println("Потребуется дней: 3");
-        } else if (deliveriDistance > 100){
+        } else if (deliveryDistance > 100){
             System.out.println("Доставки нет");
         }
 
 
 
-        int montgNomber = 12;
-        switch (montgNomber){
+        int monthNomber = 12;
+        switch (monthNomber){
             case 12:
             case 1:
             case 2:
